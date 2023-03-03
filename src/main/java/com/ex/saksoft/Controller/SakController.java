@@ -43,14 +43,14 @@ public class SakController {
 	
 	
 	
-	@GetMapping("/model{id}")
+	@GetMapping("/modelbyid/{id}")
 	public SakModel findSakModelById(@PathVariable int id) {
 		return service.getSakModelById(id);
 	}
 	
 	
 	
-	@GetMapping("/model{firstName}")
+	@GetMapping("/modelbyname/{firstName}")
 	public SakModel findSakModelByFirstName(@PathVariable String firstName) {
 		return service.getSakModelByFirstName(firstName);
 	}
@@ -63,7 +63,7 @@ public class SakController {
 	}
 	
 	
-	@DeleteMapping("/delet{id}")
+	@DeleteMapping("/delet/{id}")
 	public String deletSakModel(@PathVariable int id) {
 		return service.deletSakModel(id);
 	}

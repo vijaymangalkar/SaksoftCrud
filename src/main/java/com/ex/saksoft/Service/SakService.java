@@ -43,6 +43,12 @@ public class SakService {
 	
 	
 	
+	
+	public SakModel getSakModelByLastName(String lastName){
+		return repository.findByLastName(lastName);
+		}
+	
+	
 	public String deletSakModel(int id) {
 		repository.deleteById(id);
 		return "product removed.."+ id;
